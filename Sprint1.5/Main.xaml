@@ -1,0 +1,790 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="852,700.666666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="23">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Flowchart DisplayName="フローチャート" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:Int32" Default="3" Name="counter" />
+      <Variable x:TypeArguments="s:String[]" Name="arrRows" />
+      <Variable x:TypeArguments="x:String" Name="MeetingManagementFilePass" />
+      <Variable x:TypeArguments="x:String" Name="MeetingSheetName" />
+      <Variable x:TypeArguments="x:String" Name="MeetingFilePass" />
+      <Variable x:TypeArguments="x:String" Name="MeetingFileName" />
+      <Variable x:TypeArguments="x:String" Name="JobSuiteURL" />
+      <Variable x:TypeArguments="x:String" Name="RPAMeetingManagementFilePass" />
+      <Variable x:TypeArguments="x:String" Name="RPAMeetingSheetName" />
+      <Variable x:TypeArguments="x:Int32" Name="SendCounter" />
+      <Variable x:TypeArguments="x:String" Name="EmailAttachments" />
+      <Variable x:TypeArguments="x:String" Name="MeetingFileStoragePass" />
+      <Variable x:TypeArguments="x:String" Name="JobSuiteTopURL" />
+      <Variable x:TypeArguments="x:String" Name="ErrorMessage" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,74.6666666666667</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.1666666666667 300,96</av:PointCollection>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID4</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">200,96</av:Point>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,148.666666666667 300,184</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+        <TryCatch.Try>
+          <Sequence DisplayName="初期値設定" sap:VirtualizedContainerService.HintSize="2816,2932.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="面接管理表を立ち上げ、全体件数を取得" sap:VirtualizedContainerService.HintSize="2774,2840.66666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" WorkbookPath="C:\Users\P0151229\Desktop\documment\09_PTA業務改善PJ(RPA活用)\ConfigFile.xlsx">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="2740,2732" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExcelReadCell Cell="B2" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="2698,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_22" SheetName="Settings">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[MeetingManagementFilePass]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                    <ui:ExcelReadCell Cell="B3" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="2698,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_23" SheetName="Settings">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[MeetingSheetName]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                    <ui:ExcelReadCell Cell="B4" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="2698,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_24" SheetName="Settings">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[MeetingFilePass]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                    <ui:ExcelReadCell Cell="B5" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="2698,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_25" SheetName="Settings">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[MeetingFileName]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                    <ui:ExcelReadCell Cell="B6" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="2698,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_26" SheetName="Settings">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[JobSuiteURL]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                    <ui:ExcelReadCell Cell="B7" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="2698,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_27" SheetName="Settings">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[RPAMeetingManagementFilePass]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                    <ui:ExcelReadCell Cell="B8" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="2698,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_28" SheetName="Settings">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[RPAMeetingSheetName]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                    <ui:ExcelReadCell Cell="B9" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="2698,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_53" SheetName="Settings">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[EmailAttachments]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                    <ui:ExcelReadCell Cell="B10" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="2698,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_54" SheetName="Settings">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[MeetingFileStoragePass]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                    <ui:ExcelReadCell Cell="B11" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="2698,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_55" SheetName="Settings">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[JobSuiteTopURL]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                    <ui:ExcelReadCell Cell="B12" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="2698,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_56" SheetName="Settings">
+                      <ui:ExcelReadCell.Result>
+                        <OutArgument x:TypeArguments="x:String">[ErrorMessage]</OutArgument>
+                      </ui:ExcelReadCell.Result>
+                    </ui:ExcelReadCell>
+                    <If Condition="[String.IsNullOrEmpty(MeetingManagementFilePass)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="2698,1554.66666666667" sap2010:WorkflowViewState.IdRef="If_9">
+                      <If.Then>
+                        <TerminateWorkflow DisplayName="ワークフローを終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="面接管理表のファイル格納先パスが正しくありません。運用マニュアルを確認し「ConfigFile.xlsx」の内容をご確認ください。" />
+                      </If.Then>
+                      <If.Else>
+                        <If Condition="[String.IsNullOrEmpty(MeetingSheetName)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="2452,1405.33333333333" sap2010:WorkflowViewState.IdRef="If_8">
+                          <If.Then>
+                            <TerminateWorkflow DisplayName="ワークフローを終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_2" Reason="面接管理表のシート名が正しくありません(シート名「面接管理表」)。運用マニュアルを確認し「ConfigFile.xlsx」の内容をご確認ください。" />
+                          </If.Then>
+                          <If.Else>
+                            <If Condition="[String.IsNullOrEmpty(MeetingFilePass)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="2206,1256" sap2010:WorkflowViewState.IdRef="If_7">
+                              <If.Then>
+                                <TerminateWorkflow DisplayName="ワークフローを終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_3" Reason="面接票の格納先が正しくありません。運用マニュアルを確認し「ConfigFile.xlsx」の内容をご確認ください。" />
+                              </If.Then>
+                              <If.Else>
+                                <If Condition="[String.IsNullOrEmpty(MeetingFileName)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1960,1106.66666666667" sap2010:WorkflowViewState.IdRef="If_6">
+                                  <If.Then>
+                                    <TerminateWorkflow DisplayName="ワークフローを終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_4" Reason="面接票のファイル名が正しくありません。運用マニュアルを確認し「ConfigFile.xlsx」の内容をご確認ください。" />
+                                  </If.Then>
+                                  <If.Else>
+                                    <If Condition="[String.IsNullOrEmpty(RPAMeetingManagementFilePass)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1714,957.333333333333" sap2010:WorkflowViewState.IdRef="If_5">
+                                      <If.Then>
+                                        <TerminateWorkflow DisplayName="ワークフローを終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_5" Reason="JobSuiteのURLが正しくありません。運用マニュアルを確認し「ConfigFile.xlsx」の内容をご確認ください。" />
+                                      </If.Then>
+                                      <If.Else>
+                                        <If Condition="[String.IsNullOrEmpty(RPAMeetingSheetName)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1468,808" sap2010:WorkflowViewState.IdRef="If_4">
+                                          <If.Then>
+                                            <TerminateWorkflow DisplayName="ワークフローを終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_6" Reason="JobSuiteのURLが正しくありません。運用マニュアルを確認し「ConfigFile.xlsx」の内容をご確認ください。" />
+                                          </If.Then>
+                                          <If.Else>
+                                            <If Condition="[String.IsNullOrEmpty(EmailAttachments)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1222,658.666666666667" sap2010:WorkflowViewState.IdRef="If_16">
+                                              <If.Then>
+                                                <TerminateWorkflow DisplayName="ワークフローを終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_8" Reason="JobSuiteのURLが正しくありません。運用マニュアルを確認し「ConfigFile.xlsx」の内容をご確認ください。" />
+                                              </If.Then>
+                                              <If.Else>
+                                                <If Condition="[String.IsNullOrEmpty(MeetingFileStoragePass)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="976,509.333333333333" sap2010:WorkflowViewState.IdRef="If_15">
+                                                  <If.Then>
+                                                    <TerminateWorkflow DisplayName="ワークフローを終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_9" Reason="JobSuiteのURLが正しくありません。運用マニュアルを確認し「ConfigFile.xlsx」の内容をご確認ください。" />
+                                                  </If.Then>
+                                                  <If.Else>
+                                                    <If Condition="[String.IsNullOrEmpty(JobSuiteTopURL)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="730,360" sap2010:WorkflowViewState.IdRef="If_14">
+                                                      <If.Then>
+                                                        <TerminateWorkflow DisplayName="ワークフローを終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_10" Reason="JobSuiteのURLが正しくありません。運用マニュアルを確認し「ConfigFile.xlsx」の内容をご確認ください。" />
+                                                      </If.Then>
+                                                      <If.Else>
+                                                        <If Condition="[String.IsNullOrEmpty(ErrorMessage)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="484,210.666666666667" sap2010:WorkflowViewState.IdRef="If_13">
+                                                          <If.Then>
+                                                            <TerminateWorkflow DisplayName="ワークフローを終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_11" Reason="JobSuiteのURLが正しくありません。運用マニュアルを確認し「ConfigFile.xlsx」の内容をご確認ください。" />
+                                                          </If.Then>
+                                                        </If>
+                                                      </If.Else>
+                                                    </If>
+                                                  </If.Else>
+                                                </If>
+                                              </If.Else>
+                                            </If>
+                                          </If.Else>
+                                        </If>
+                                      </If.Else>
+                                    </If>
+                                  </If.Else>
+                                </If>
+                              </If.Else>
+                            </If>
+                          </If.Else>
+                        </If>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExcelApplicationScope>
+          </Sequence>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1836.66666666667,104.666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <TerminateWorkflow DisplayName="ワークフローを終了" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_7" Reason="予期せぬエラーが発生しました。「ConfigFile.xlsx」の内容に誤りがないかご確認ください。" />
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID0">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">200,184</av:Point>
+              <av:Size x:Key="ShapeSize">200,52</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,236 300,266 300.02,266 300.02,276</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <TryCatch sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch.Try>
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel アプリケーション スコープ" sap:VirtualizedContainerService.HintSize="1642,2610.66666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" WorkbookPath="[RPAMeetingManagementFilePass]">
+                <ui:ExcelApplicationScope.Body>
+                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="実行" sap:VirtualizedContainerService.HintSize="1608,2502" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="sd:DataTable" Name="expTable" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ExcelReadRange AddHeaders="True" DataTable="[expTable]" DisplayName="範囲を読み込み" sap:VirtualizedContainerService.HintSize="1566,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" SheetName="[RPAMeetingSheetName]">
+                        <ui:ExcelReadRange.Range>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </ui:ExcelReadRange.Range>
+                      </ui:ExcelReadRange>
+                      <While DisplayName="繰り返し (前判定)" sap:VirtualizedContainerService.HintSize="1566,2311.33333333333" sap2010:WorkflowViewState.IdRef="While_2">
+                        <While.Condition>
+                          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="counter &lt; expTable.Rows.Count+2" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+                        </While.Condition>
+                        <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="1519.33333333333,2152" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="deleyFlag" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ExcelReadCell Cell="[&quot;AA&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="1477.33333333333,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_29" SheetName="[RPAMeetingSheetName]">
+                            <ui:ExcelReadCell.Result>
+                              <OutArgument x:TypeArguments="x:String">[deleyFlag]</OutArgument>
+                            </ui:ExcelReadCell.Result>
+                          </ui:ExcelReadCell>
+                          <If Condition="[deleyFlag.Contains(&quot;○&quot;)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1477.33333333333,1860" sap2010:WorkflowViewState.IdRef="If_12">
+                            <If.Then>
+                              <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,1030.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="meetingHyouNo3" />
+                                  <Variable x:TypeArguments="x:String" Name="jobsuiteID" />
+                                  <Variable x:TypeArguments="x:String" Name="jobsuiteName" />
+                                  <Variable x:TypeArguments="s:DateTime" Name="meetingDay3" />
+                                  <Variable x:TypeArguments="x:String" Name="ThirdMeetingInterviewer1" />
+                                  <Variable x:TypeArguments="x:String" Name="ThirdMeetingInterviewer2" />
+                                  <Variable x:TypeArguments="x:String" Name="ThirdMeetingInterviewer3" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ExcelReadCell Cell="[&quot;A&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_30" SheetName="[RPAMeetingSheetName]">
+                                  <ui:ExcelReadCell.Result>
+                                    <OutArgument x:TypeArguments="x:String">[jobsuiteID]</OutArgument>
+                                  </ui:ExcelReadCell.Result>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:ExcelReadCell>
+                                <ui:ExcelReadCell Cell="[&quot;B&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_31" SheetName="[RPAMeetingSheetName]">
+                                  <ui:ExcelReadCell.Result>
+                                    <OutArgument x:TypeArguments="x:String">[jobsuiteName]</OutArgument>
+                                  </ui:ExcelReadCell.Result>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:ExcelReadCell>
+                                <ui:ExcelReadCell Cell="[&quot;U&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_32" SheetName="[RPAMeetingSheetName]">
+                                  <ui:ExcelReadCell.Result>
+                                    <OutArgument x:TypeArguments="x:String">[meetingHyouNo3]</OutArgument>
+                                  </ui:ExcelReadCell.Result>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:ExcelReadCell>
+                                <ui:ExcelReadCell Cell="[&quot;V&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_33" SheetName="[RPAMeetingSheetName]">
+                                  <ui:ExcelReadCell.Result>
+                                    <OutArgument x:TypeArguments="s:DateTime">[meetingDay3]</OutArgument>
+                                  </ui:ExcelReadCell.Result>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:ExcelReadCell>
+                                <ui:ExcelReadCell Cell="[&quot;W&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_47" SheetName="[RPAMeetingSheetName]">
+                                  <ui:ExcelReadCell.Result>
+                                    <OutArgument x:TypeArguments="x:String">[ThirdMeetingInterviewer1]</OutArgument>
+                                  </ui:ExcelReadCell.Result>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:ExcelReadCell>
+                                <ui:ExcelReadCell Cell="[&quot;X&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_34" SheetName="[RPAMeetingSheetName]">
+                                  <ui:ExcelReadCell.Result>
+                                    <OutArgument x:TypeArguments="x:String">[ThirdMeetingInterviewer2]</OutArgument>
+                                  </ui:ExcelReadCell.Result>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:ExcelReadCell>
+                                <ui:ExcelReadCell Cell="[&quot;Y&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_48" SheetName="[RPAMeetingSheetName]">
+                                  <ui:ExcelReadCell.Result>
+                                    <OutArgument x:TypeArguments="x:String">[ThirdMeetingInterviewer3]</OutArgument>
+                                  </ui:ExcelReadCell.Result>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:ExcelReadCell>
+                                <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;※本メールはRPAによる自動送信メールです。&quot;+Environment.NewLine+Environment.NewLine+&quot;以下該当の面接票をご提出ください。&quot;+Environment.NewLine+&quot;提出の際はこのメールに返信するか、&quot;+Environment.NewLine+&quot;面接依頼時のメールに返信するかのいずれかにてお願いいたします。&quot;+Environment.NewLine+Environment.NewLine+&quot;【面接情報】&quot;+Environment.NewLine+&quot;候補者：&quot;+jobsuiteName+Environment.NewLine+&quot;面接日：&quot;+meetingDay3.ToString+Environment.NewLine+&quot;JoBSuiteURL：&quot;+JobSuiteURL+jobsuiteID]" DisplayName="Outlook メール メッセージを送信" sap:VirtualizedContainerService.HintSize="334,146.666666666667" sap2010:WorkflowViewState.IdRef="SendOutlookMail_5" IsBodyHtml="False" IsDraft="False" Subject="[&quot;催促メール【&quot;+meetingHyouNo3+&quot;】面接票を提出してください。&quot;]" To="[ThirdMeetingInterviewer1+&quot;;&quot;+ThirdMeetingInterviewer2+&quot;;&quot;+ThirdMeetingInterviewer3]">
+                                  <ui:SendOutlookMail.Files>
+                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                  </ui:SendOutlookMail.Files>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:SendOutlookMail>
+                                <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[SendCounter]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[SendCounter+1]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="1055.33333333333,1710.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ExcelReadCell Cell="[&quot;R&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="1013.33333333333,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_35" SheetName="[RPAMeetingSheetName]">
+                                  <ui:ExcelReadCell.Result>
+                                    <OutArgument x:TypeArguments="x:String">[deleyFlag]</OutArgument>
+                                  </ui:ExcelReadCell.Result>
+                                </ui:ExcelReadCell>
+                                <If Condition="[deleyFlag.Contains(&quot;○&quot;)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1013.33333333333,1520" sap2010:WorkflowViewState.IdRef="If_11">
+                                  <If.Then>
+                                    <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,1030.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="meetingHyouNo3" />
+                                        <Variable x:TypeArguments="x:String" Name="jobsuiteID" />
+                                        <Variable x:TypeArguments="x:String" Name="jobsuiteName" />
+                                        <Variable x:TypeArguments="s:DateTime" Name="meetingDay2" />
+                                        <Variable x:TypeArguments="x:String" Name="meetingHyouNo2" />
+                                        <Variable x:TypeArguments="x:String" Name="SecondMeetingInterviewer1" />
+                                        <Variable x:TypeArguments="x:String" Name="SecondMeetingInterviewer2" />
+                                        <Variable x:TypeArguments="x:String" Name="SecondMeetingInterviewer3" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:ExcelReadCell Cell="[&quot;A&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_36" SheetName="[RPAMeetingSheetName]">
+                                        <ui:ExcelReadCell.Result>
+                                          <OutArgument x:TypeArguments="x:String">[jobsuiteID]</OutArgument>
+                                        </ui:ExcelReadCell.Result>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:ExcelReadCell>
+                                      <ui:ExcelReadCell Cell="[&quot;B&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_37" SheetName="[RPAMeetingSheetName]">
+                                        <ui:ExcelReadCell.Result>
+                                          <OutArgument x:TypeArguments="x:String">[jobsuiteName]</OutArgument>
+                                        </ui:ExcelReadCell.Result>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:ExcelReadCell>
+                                      <ui:ExcelReadCell Cell="[&quot;L&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_38" SheetName="[RPAMeetingSheetName]">
+                                        <ui:ExcelReadCell.Result>
+                                          <OutArgument x:TypeArguments="x:String">[meetingHyouNo2]</OutArgument>
+                                        </ui:ExcelReadCell.Result>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:ExcelReadCell>
+                                      <ui:ExcelReadCell Cell="[&quot;M&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_39" SheetName="[RPAMeetingSheetName]">
+                                        <ui:ExcelReadCell.Result>
+                                          <OutArgument x:TypeArguments="s:DateTime">[meetingDay2]</OutArgument>
+                                        </ui:ExcelReadCell.Result>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:ExcelReadCell>
+                                      <ui:ExcelReadCell Cell="[&quot;N&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_49" SheetName="[RPAMeetingSheetName]">
+                                        <ui:ExcelReadCell.Result>
+                                          <OutArgument x:TypeArguments="x:String">[SecondMeetingInterviewer1]</OutArgument>
+                                        </ui:ExcelReadCell.Result>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:ExcelReadCell>
+                                      <ui:ExcelReadCell Cell="[&quot;O&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_50" SheetName="[RPAMeetingSheetName]">
+                                        <ui:ExcelReadCell.Result>
+                                          <OutArgument x:TypeArguments="x:String">[SecondMeetingInterviewer2]</OutArgument>
+                                        </ui:ExcelReadCell.Result>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:ExcelReadCell>
+                                      <ui:ExcelReadCell Cell="[&quot;P&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_40" SheetName="[RPAMeetingSheetName]">
+                                        <ui:ExcelReadCell.Result>
+                                          <OutArgument x:TypeArguments="x:String">[SecondMeetingInterviewer3]</OutArgument>
+                                        </ui:ExcelReadCell.Result>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:ExcelReadCell>
+                                      <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;※本メールはRPAによる自動送信メールです。&quot;+Environment.NewLine+Environment.NewLine+&quot;以下該当の面接票をご提出ください。&quot;+Environment.NewLine+&quot;提出の際はこのメールに返信するか、&quot;+Environment.NewLine+&quot;面接依頼時のメールに返信するかのいずれかにてお願いいたします。&quot;+Environment.NewLine+Environment.NewLine+&quot;【面接情報】&quot;+Environment.NewLine+&quot;候補者：&quot;+jobsuiteName+Environment.NewLine+&quot;面接日：&quot;+meetingDay2.ToString+Environment.NewLine+&quot;JoBSuiteURL：&quot;+JobSuiteURL+jobsuiteID]" DisplayName="Outlook メール メッセージを送信" sap:VirtualizedContainerService.HintSize="334,146.666666666667" sap2010:WorkflowViewState.IdRef="SendOutlookMail_6" IsBodyHtml="False" IsDraft="False" Subject="[&quot;催促メール【&quot;+meetingHyouNo2+&quot;】面接票を提出してください。&quot;]" To="[SecondMeetingInterviewer1+&quot;;&quot;+SecondMeetingInterviewer2+&quot;;&quot;+SecondMeetingInterviewer3]">
+                                        <ui:SendOutlookMail.Files>
+                                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                        </ui:SendOutlookMail.Files>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:SendOutlookMail>
+                                      <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[SendCounter]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[SendCounter+1]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="591.333333333333,1370.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:ExcelReadCell Cell="[&quot;I&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="549.333333333333,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_41" SheetName="[RPAMeetingSheetName]">
+                                        <ui:ExcelReadCell.Result>
+                                          <OutArgument x:TypeArguments="x:String">[deleyFlag]</OutArgument>
+                                        </ui:ExcelReadCell.Result>
+                                      </ui:ExcelReadCell>
+                                      <If Condition="[deleyFlag.Contains(&quot;○&quot;)]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="549.333333333333,1180" sap2010:WorkflowViewState.IdRef="If_10">
+                                        <If.Then>
+                                          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,1030.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="x:String" Name="meetingHyouNo3" />
+                                              <Variable x:TypeArguments="x:String" Name="jobsuiteID" />
+                                              <Variable x:TypeArguments="x:String" Name="jobsuiteName" />
+                                              <Variable x:TypeArguments="x:String" Name="meetingDay2" />
+                                              <Variable x:TypeArguments="x:String" Name="meetingHyouNo2" />
+                                              <Variable x:TypeArguments="x:String" Name="meetingHyouNo1" />
+                                              <Variable x:TypeArguments="s:DateTime" Name="meetingDay1" />
+                                              <Variable x:TypeArguments="x:String" Name="FirstMeetingInterviewer1" />
+                                              <Variable x:TypeArguments="x:String" Name="FirstMeetingInterviewer2" />
+                                              <Variable x:TypeArguments="x:String" Name="FirstMeetingInterviewer3" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:ExcelReadCell Cell="[&quot;A&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_42" SheetName="[RPAMeetingSheetName]">
+                                              <ui:ExcelReadCell.Result>
+                                                <OutArgument x:TypeArguments="x:String">[jobsuiteID]</OutArgument>
+                                              </ui:ExcelReadCell.Result>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:ExcelReadCell>
+                                            <ui:ExcelReadCell Cell="[&quot;B&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_43" SheetName="[RPAMeetingSheetName]">
+                                              <ui:ExcelReadCell.Result>
+                                                <OutArgument x:TypeArguments="x:String">[jobsuiteName]</OutArgument>
+                                              </ui:ExcelReadCell.Result>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:ExcelReadCell>
+                                            <ui:ExcelReadCell Cell="[&quot;C&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_44" SheetName="[RPAMeetingSheetName]">
+                                              <ui:ExcelReadCell.Result>
+                                                <OutArgument x:TypeArguments="x:String">[meetingHyouNo1]</OutArgument>
+                                              </ui:ExcelReadCell.Result>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:ExcelReadCell>
+                                            <ui:ExcelReadCell Cell="[&quot;D&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_45" SheetName="[RPAMeetingSheetName]">
+                                              <ui:ExcelReadCell.Result>
+                                                <OutArgument x:TypeArguments="s:DateTime">[meetingDay1]</OutArgument>
+                                              </ui:ExcelReadCell.Result>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:ExcelReadCell>
+                                            <ui:ExcelReadCell Cell="[&quot;E&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_51" SheetName="[RPAMeetingSheetName]">
+                                              <ui:ExcelReadCell.Result>
+                                                <OutArgument x:TypeArguments="x:String">[FirstMeetingInterviewer1]</OutArgument>
+                                              </ui:ExcelReadCell.Result>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:ExcelReadCell>
+                                            <ui:ExcelReadCell Cell="[&quot;F&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_46" SheetName="[RPAMeetingSheetName]">
+                                              <ui:ExcelReadCell.Result>
+                                                <OutArgument x:TypeArguments="x:String">[FirstMeetingInterviewer2]</OutArgument>
+                                              </ui:ExcelReadCell.Result>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:ExcelReadCell>
+                                            <ui:ExcelReadCell Cell="[&quot;G&quot;+counter.ToString]" DisplayName="セルを読み込み" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadCell_52" SheetName="[RPAMeetingSheetName]">
+                                              <ui:ExcelReadCell.Result>
+                                                <OutArgument x:TypeArguments="x:String">[FirstMeetingInterviewer3]</OutArgument>
+                                              </ui:ExcelReadCell.Result>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:ExcelReadCell>
+                                            <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;※本メールはRPAによる自動送信メールです。&quot;+Environment.NewLine+Environment.NewLine+&quot;以下該当の面接票をご提出ください。&quot;+Environment.NewLine+&quot;提出の際はこのメールに返信するか、&quot;+Environment.NewLine+&quot;面接依頼時のメールに返信するかのいずれかにてお願いいたします。&quot;+Environment.NewLine+Environment.NewLine+&quot;【面接情報】&quot;+Environment.NewLine+&quot;候補者：&quot;+jobsuiteName+Environment.NewLine+&quot;面接日：&quot;+meetingDay1.ToString+Environment.NewLine+&quot;JoBSuiteURL：&quot;+JobSuiteURL+jobsuiteID]" DisplayName="Outlook メール メッセージを送信" sap:VirtualizedContainerService.HintSize="334,146.666666666667" sap2010:WorkflowViewState.IdRef="SendOutlookMail_7" IsBodyHtml="False" IsDraft="False" Subject="[&quot;催促メール【&quot;+meetingHyouNo1+&quot;】面接票を提出してください。&quot;]" To="[FirstMeetingInterviewer1+&quot;;&quot;+FirstMeetingInterviewer2+&quot;;&quot;+FirstMeetingInterviewer3]">
+                                              <ui:SendOutlookMail.Files>
+                                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                              </ui:SendOutlookMail.Files>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:SendOutlookMail>
+                                            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:Int32">[SendCounter]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:Int32">[SendCounter+1]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </Sequence>
+                                        </If.Then>
+                                      </If>
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                          <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="1477.33333333333,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[counter + 1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </While>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ExcelApplicationScope.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ExcelApplicationScope>
+            </TryCatch.Try>
+            <TryCatch.Catches>
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1646.66666666667,128.666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ActivityAction x:TypeArguments="s:Exception">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                  </ActivityAction.Argument>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;予期せぬエラーが発生しました。もう一度RPAを実行し直してください。&quot;]" />
+                </ActivityAction>
+              </Catch>
+            </TryCatch.Catches>
+          </TryCatch>
+          <FlowStep.Next>
+            <FlowDecision x:Name="__ReferenceID1" Condition="[SendCounter&gt;0]" DisplayName="フロー条件分岐" sap:VirtualizedContainerService.HintSize="78.6666666666667,86.6666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <av:Point x:Key="ShapeLocation">260.686666666667,276</av:Point>
+                  <av:Size x:Key="ShapeSize">78.6666666666667,86.6666666666667</av:Size>
+                  <av:PointCollection x:Key="TrueConnector">260.686666666667,319.333333333333 230.686666666667,319.333333333333 230.686666666667,320.02 210,320.02</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">339.353333333333,319.333333333333 369.353333333333,319.333333333333 369.353333333333,320 390,320</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <FlowDecision.True>
+                <FlowStep x:Name="__ReferenceID3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">10,294.02</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;※本メールはRPAによる自動送信メールです。&quot;+Environment.NewLine+SendCounter.ToString+&quot;件の催促メールを送信しました。&quot;]" DisplayName="Outlook メール メッセージを送信" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="SendOutlookMail_9" IsBodyHtml="False" IsDraft="False" Subject="RPAメッセージ" To="[ErrorMessage]">
+                    <ui:SendOutlookMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                    </ui:SendOutlookMail.Files>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:SendOutlookMail>
+                </FlowStep>
+              </FlowDecision.True>
+              <FlowDecision.False>
+                <FlowStep x:Name="__ReferenceID2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">390,294</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;催促対象件名は0件でした。&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:MessageBox>
+                </FlowStep>
+              </FlowDecision.False>
+            </FlowDecision>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+  </Flowchart>
+</Activity>
